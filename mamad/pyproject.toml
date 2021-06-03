@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Mamad"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://mamad.com"
+license = "Apache Software License"
+author = 'AlonG'
+author_email = "alon.goldenberg@gmail.com"
+
+[tool.briefcase.app.mamad]
+formal_name = "Mamad"
+description = "Real Time red alert distnace calc"
+icon = "src/mamad/resources/mamad"
+sources = ['src/mamad']
+requires = []
+
+
+[tool.briefcase.app.mamad.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.mamad.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.mamad.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.mamad.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.mamad.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
